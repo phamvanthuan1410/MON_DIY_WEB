@@ -1,50 +1,287 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-  <title>MON DIY - MON MODULE</title>
-  <style>
-    body{
-      font-family: Arial;
-      text-align:center;
-      background:#f2f2f2;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .card{
-      background:white;
-      width:300px;
-      margin:auto;
-      padding:20px;
-      border-radius:15px;
-    }
+<title>MON DIY</title>
 
-    img{
-      width:100%;
-      border-radius:10px;
-    }
+<style>
 
-    a{
-      display:block;
-      margin:10px;
-      padding:12px;
-      background:#007bff;
-      color:white;
-      text-decoration:none;
-      border-radius:8px;
-    }
-  </style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#07111f;
+    color:white;
+}
+
+/* HEADER */
+
+header{
+    background:#0b1728;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+    border-bottom:1px solid #123;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+
+.logo h1{
+    font-size:28px;
+    color:#33b5ff;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#33b5ff;
+}
+
+/* HERO */
+
+.hero{
+    height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+    url("mondiy_wallpaper.jpg");
+    
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    padding:20px;
+}
+
+.hero h2{
+    font-size:60px;
+    margin-bottom:20px;
+    color:#4cc9ff;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:20px;
+    line-height:1.6;
+}
+
+.hero button{
+    margin-top:30px;
+    padding:15px 40px;
+    border:none;
+    border-radius:10px;
+    background:#0099ff;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    background:#0077cc;
+}
+
+/* SECTION */
+
+.section{
+    padding:80px 30px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:40px;
+    color:#4cc9ff;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#0d1b2e;
+    padding:25px;
+    border-radius:20px;
+    transition:0.3s;
+    border:1px solid #18314f;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#33b5ff;
+}
+
+.card img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#4cc9ff;
+}
+
+.card p{
+    opacity:0.9;
+    line-height:1.6;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact a{
+    display:inline-block;
+    margin:10px;
+    padding:15px 25px;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    background:#0099ff;
+    transition:0.3s;
+}
+
+.contact a:hover{
+    background:#0077cc;
+}
+
+/* FOOTER */
+
+footer{
+    background:#050b14;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+    border-top:1px solid #123;
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="card">
-  <h1>MON DIY - MON MODULE</h1>
+<header>
 
-  <img src="mondiy_wallpager.jpg">
-
-  <a href="https://facebook.com">Facebook</a>
-  <a href="https://shopee.vn">Shopee</a>
-  <a href="https://zalo.me">Zalo</a>
+<div class="logo">
+    <img src="mondiylogo.jpg">
+    <h1>MON DIY</h1>
 </div>
+
+<nav>
+    <a href="#">Trang chủ</a>
+    <a href="#">Dịch vụ</a>
+    <a href="#">Sản phẩm</a>
+    <a href="#">Liên hệ</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>MON DIY</h2>
+
+<p>
+Chuyên chia sẻ công nghệ, điện tử, chế tạo DIY, phần mềm và giải pháp sáng tạo.
+</p>
+
+<button>Xem ngay</button>
+
+</section>
+
+<section class="section">
+
+<div class="section-title">
+    <h2>Dịch vụ nổi bật</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+    <img src="mondiylogo.jpg">
+    <h3>Thiết kế mạch</h3>
+    <p>
+        Thiết kế và phát triển mạch điện tử theo yêu cầu.
+    </p>
+</div>
+
+<div class="card">
+    <img src="mondiylogo.jpg">
+    <h3>ESP32 - IoT</h3>
+    <p>
+        Lập trình ESP32, điều khiển thiết bị qua WiFi.
+    </p>
+</div>
+
+<div class="card">
+    <img src="mondiylogo.jpg">
+    <h3>In 3D</h3>
+    <p>
+        Thiết kế mô hình và hỗ trợ in 3D sáng tạo.
+    </p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section contact">
+
+<div class="section-title">
+    <h2>Kết nối với MON DIY</h2>
+</div>
+
+<a href="https://www.facebook.com/thuan.pham.1997">Facebook</a>
+<a href="https://zalo.me">Zalo</a>
+<a href="https://youtube.com">YouTube</a>
+
+</section>
+
+<footer>
+
+<p>© 2026 MON DIY - Chế tạo điện tử sáng tạo</p>
+
+</footer>
 
 </body>
 </html>
+```
